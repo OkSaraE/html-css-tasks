@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+  font-family: 'Press Start 2P', cursive;
+  
+  background-color: rgb(173, 234, 255);
+}
+
+main{
+  background-color: rgb(230, 242, 245);
+  width: 800px;
+  margin: auto;
+}
+
+.doggo{
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  background-image: url(img/sprite.png);
+  width: calc(600px / 5);
+  height: 110px;
+  background-position: 0 0;
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+  animation:dogwalk 0.5s steps(5) 1s 6,
+  dogmove 3s 1s linear forwards,
+  dogsnif 0.5s 4s steps(2) 4;
+}
+
+@keyframes dogwalk {
+    0%{
+      background-position: 0 0;
+    }
+    100%{
+      background-position: -600px 0;
+    }
+  }
+
+  @keyframes dogmove {
+    0%{
+      left:0;
+    }
+    100%{
+      left:400px;
+    }
+  }
+
+  @keyframes dogsnif {
+    from{
+      background-position: -360px 0;
+    }
+    to{
+      background-position: -600px 0;
+    }
+  }
+
+  .stage{
+    background-image: url(img/stage.png);
+    width: 800px;
+    height: 480px;
+    background-size: contain;
+    position: relative;
+  }

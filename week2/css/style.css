@@ -17,14 +17,18 @@ nav {
   padding: 0px;
 }
 
-.pageLink {
+#linkBar>li{
   display: inline;
+}
+
+.pageLink {
   color: var(--mainRed);
   padding: 10px 5px 10px 5px;
   margin-right: 10px;
   font-size: 24px;
   font-family: var(--lato-bo);
   font-weight: bold;
+  text-decoration: none;
 }
 
 .pageLink:hover {
@@ -89,19 +93,25 @@ header {
 
 #headerImg {
   background-image: url(../img/food.jpeg);
-  background-size: cover;
-  background-position: center;
-  transform: scaleX(-1);
-  object-fit: cover;
   width: 60vw;
   height: auto;
-  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position: top -80px right 8vw; 
+  background-repeat: no-repeat;
+
+  object-fit: cover;
+  
+  /* clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%); */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
 }
 
 /* Main  */
 main {
   margin-bottom: 20px;
+  height: 100vh;
 }
+
 .flex {
   display: flex;
 }
@@ -119,8 +129,8 @@ main {
 
 #menuCardContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  gap: 20px;
 }
 
 .menuCard {
