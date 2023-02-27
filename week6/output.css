@@ -1,0 +1,61 @@
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  width: 70%;
+  margin: auto;
+  background-color: #19191C;
+}
+
+main {
+  background-color: #F3F1F8;
+  padding: 16px;
+}
+
+nav ul {
+  list-style-type: none;
+  background-color: #322E4D;
+  overflow: auto;
+  padding: 0;
+  margin: 0 0 16px;
+}
+nav li {
+  float: left;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  padding: 16px 18px;
+}
+nav a:hover {
+  background-color: #9474D2;
+  color: black;
+}
+
+.textbox2, .textbox1 {
+  padding: 16px;
+  border-radius: 10px;
+  width: 50%;
+  border: solid 1px black;
+  background-color: #9474D2;
+}
+
+.center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.image1 {
+  width: 50%;
+  -webkit-filter: grayscale(40%);
+  filter: grayscale(40%);
+}
+
+.image2 {
+  width: 50%;
+}
+
+/*# sourceMappingURL=output.css.map */

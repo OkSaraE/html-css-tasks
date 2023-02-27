@@ -1,0 +1,40 @@
+@use "base";
+
+@use "nav";
+
+%card-base {
+  padding: base.$base-pad;
+  border-radius: 10px;
+  width: 50%;
+  border: solid 1px base.$black-color;
+  background-color: base.$light-color;
+}
+
+.textbox1 {
+  @extend %card-base;
+}
+
+.textbox2 {
+  @extend %card-base;
+}
+
+.center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+@mixin img-filter($amount){
+  -webkit-filter: grayscale($amount);
+  filter: grayscale($amount)
+}
+
+.image1 {
+  width: 50%;
+  @include img-filter(40%);
+}
+
+.image2 {
+  width: 50%;
+}

@@ -1,0 +1,23 @@
+//_base
+$primary-color: #322E4D;
+$light-color: #9474D2;
+$dark-color: #19191C;
+$off-white: #F3F1F8;
+
+$black-color: black;
+$white-color: white;
+
+$base-pad: 16px;
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0; 
+  width: 70%;
+  margin: auto;
+  background-color: $dark-color;
+}
+
+main {
+  background-color: $off-white;
+  padding: $base-pad;
+}
