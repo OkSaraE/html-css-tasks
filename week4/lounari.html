@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta
+      name="description"
+      content="Lunch website to find best place to eat."
+    />
+    <meta
+      name="description"
+      content="Palvelu etsii lähelläsi olevat lounaspaikat, seka näyttää niiden
+      päivittäisen lounaslistan."
+    />
+    <title>Lounari</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    
+    <nav>
+      <label id=hamburgerNav for="toggle">☰</label>
+      <input type="checkbox" id="toggle" />
+
+      <ul id="linkBar">
+        <li><a class="pageLink" href="lounari.html">Etusivu</a></li>
+        <li><a class="pageLink" href="ruokalista.html">Ruokalista</a></li>
+        <li><a class="pageLink" href="ravintolat.html">Ravintolat</a></li>
+        <li><a class="pageLink" href="yhteystiedot.html">Yhteystiedot</a></li>
+      </ul>
+
+      <div id="searchBar">
+        <label for="inputBar"
+          ><img src="icons/search.svg" id="searchIcon" alt="icon"
+        /></label>
+        <input
+          id="inputBar"
+          type="text"
+          placeholder="Etsi ravintolaa nimellä"
+        />
+      </div>
+
+    </nav>
+
+    <!-- Header  -->
+    <header>
+      <div id="headerText">
+        <h1 id="heading">Lounari.</h1>
+        <h2 id="slogan">Missä tänään syötäisiin?</h2>
+      </div>
+      <div id="headerImg"></div>
+    </header>
+
+    <!-- Main  -->
+    <main>
+      <section class="flex" id="bodyTextContainer">
+        <p id="bodyText">
+          Missä tänään syötäisiin Tuttu tarina ennen lounashetkeä. <br />
+          Palvelu etsii lähelläsi olevat lounaspaikat, seka näyttää niiden
+          päivittäisen lounaslistan. <br />
+          Viikottaiset lounaslistat ovat myös käytettävissäsi. Pääset niihin
+          klikkaamalla ravintolan logoa.
+        </p>
+      </section>
+
+      <section id="menuCardContainer">
+        <article class="menuCard flex" id="menu1">
+          <div class="menuImgContainer">
+            <img src="img/fazerLogo.jpg" alt="restaurantLogo" class="logo" />
+          </div>
+          <div class="menuTextContainer">
+            <h3 class="menuHeading">Metropolia Myyrmäki</h3>
+            <p class="menuBody">Ruokalista</p>
+          </div>
+          <div class="locationContainer flex">
+            <div class="locationIcon"></div>
+            <p class="locationText">100m</p>
+          </div>
+        </article>
+
+        <article class="menuCard flex" id="menu2">
+          <div class="menuImgContainer">
+            <img src="img/fazerLogo.jpg" alt="restaurantLogo" class="logo" />
+          </div>
+          <div class="menuTextContainer">
+            <h3 class="menuHeading">Metropolia Myyrmäki</h3>
+            <p class="menuBody">Ruokalista</p>
+          </div>
+          <div class="locationContainer flex">
+            <div class="locationIcon"></div>
+            <p class="locationText">100m</p>
+          </div>
+        </article>
+
+        <article class="menuCard flex" id="add">
+          <div id="addIcon"></div>
+          <p class="menuBody">Lisää Ravintola</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+  </body>
+</html>

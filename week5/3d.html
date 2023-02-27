@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="3d.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CSS 3D</h1>
+    <div class="scene3d" style="margin-top: 30px">
+      <div class="object3d begin" id="obj1">
+        <img
+          class="face3d"
+          src="http://animateyourhtml5.appspot.com/images/tile_browser.png"
+          id="im14"
+        />
+        <img
+          class="face3d"
+          src="http://animateyourhtml5.appspot.com/images/tile_phone.png"
+          id="im15"
+        />
+      </div>
+    </div>
+
+    <h1>WebGl</h1>
+    <div id="canvas" style></div>
+
+    <script type="module">
+      import * as THREE from "https://unpkg.com/three/build/three.module.js";
+
+      const container = document.getElementById("canvas");
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        container.offsetWidth / container.offsetHeight,
+        0.1,
+        1000
+      );
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      container.appendChild(renderer.domElement);
+
+      const geometry = new THREE.BoxGeometry(1, 1, 1);
+      const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+      const cube = new THREE.Mesh(geometry, material);
+      scene.add(cube);
+
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+      scene.add(directionalLight);
+
+      const light = new THREE.AmbientLight(0x404040); // soft white light
+      scene.add(light);
+
+      camera.position.z = 1.5;
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+
+      window.addEventListener('resize', onWindowResize);
+
+      function onWindowResize(){
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+
+        render.setSize(container.offsetWidth, container.offsetHeight);
+      }
+    </script>
+  </body>
+</html>

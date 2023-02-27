@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-body{
-  font-family: 'Press Start 2P', cursive;
-  
+body {
+  font-family: "Press Start 2P", cursive;
   background-color: rgb(173, 234, 255);
 }
 
-main{
+main {
   background-color: rgb(230, 242, 245);
   width: 800px;
   margin: auto;
+  padding: 20px;
+  border: 2px solid black;
 }
 
-.doggo{
+.doggo {
   position: absolute;
   bottom: 50px;
   left: 10px;
@@ -21,44 +22,87 @@ main{
   height: 110px;
   background-position: 0 0;
 
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-
-  animation:dogwalk 0.5s steps(5) 1s 6,
-  dogmove 3s 1s linear forwards,
-  dogsnif 0.5s 4s steps(2) 4;
+  animation: dogwalk 0.5s steps(5) 1s 6, dogmove 3s 1s linear forwards,
+    dogsnif 0.5s 4s steps(2) 4;
 }
 
 @keyframes dogwalk {
-    0%{
-      background-position: 0 0;
-    }
-    100%{
-      background-position: -600px 0;
-    }
+  0% {
+    background-position: 0 0;
   }
+  100% {
+    background-position: -600px 0;
+  }
+}
 
-  @keyframes dogmove {
-    0%{
-      left:0;
-    }
-    100%{
-      left:400px;
-    }
+@keyframes dogmove {
+  0% {
+    left: 0;
   }
+  100% {
+    left: 400px;
+  }
+}
 
-  @keyframes dogsnif {
-    from{
-      background-position: -360px 0;
-    }
-    to{
-      background-position: -600px 0;
-    }
+@keyframes dogsnif {
+  from {
+    background-position: -360px 0;
   }
+  to {
+    background-position: -600px 0;
+  }
+}
 
-  .stage{
-    background-image: url(img/stage.png);
-    width: 800px;
-    height: 480px;
-    background-size: contain;
-    position: relative;
+.bird{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-image: url(img/sprite.png);
+  width: calc(240px / 3);
+  height: 65px;
+  background-position: 0px -240px;
+
+  animation: birdmove 6s linear 1s, birdfly 0.5s steps(3) 1s 6,
+  birdup 0.5s steps(3) 4s 6
+}
+
+@keyframes birdmove {
+  0%{
+    left:0;
+    top:10px;
   }
+  50%{
+    left:400px;
+    top:100px;
+  }
+  100%{
+    left:700px;
+    top:10px;
+  }
+}
+
+@keyframes birdfly{
+  0% {
+    background-position: 0px -240px;
+  }
+  100% {
+    background-position: -240px -240px;
+  }
+}
+
+@keyframes birdup{
+  0% {
+    background-position: 0px -310px;
+  }
+  100% {
+    background-position: -240px -310px;
+  }
+}
+
+.stage {
+  background-image: url(img/stage.png);
+  width: 800px;
+  height: 480px;
+  background-size: contain;
+  position: relative;
+}

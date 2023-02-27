@@ -1,0 +1,54 @@
+/* Navigator for mobile */
+nav {
+  border-bottom: 2px solid black;
+  padding: 20px;
+  line-height: 50px;
+  height: 50px;
+}
+
+#linkbar {
+  margin-top: 30px;
+}
+
+#linkbar li {
+  text-decoration: none;
+  color: black;
+  margin: 0 20px;
+  line-height: 50px;
+}
+
+#hamburgerNav {
+  display: none;
+  width: 40px;
+  line-height: 50px;
+}
+
+#toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #hamburgerNav {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+
+  #linkBar {
+    height: 300px;
+    width: 100vw;
+    background-color: var(--white);
+    display: none;
+    z-index: 10;
+  }
+
+  #linkBar > li {
+    display: block;
+  }
+
+  #toggle:checked + #linkBar {
+    display: block;
+  }
+}
+
+
